@@ -1,0 +1,18 @@
+# Entorno virtual
+venv/
+.env
+*.pyc
+__pycache__/
+instance/
+.mypy_cache/
+.db.sqlite3
+*.sqlite3
+.DS_Store
+
+# Archivos de migraciones generados automáticamente
+migrations/versions/
+
+# Pytest y coverage
+.coverage
+htmlcov/
+pytest_cache/
