@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module app.schemas</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="app.html" class="white">app</a>.schemas</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/daniel/Documents/work/restaurante-backend/app/schemas.py">/Users/daniel/Documents/work/restaurante-backend/app/schemas.py</a></td></tr></table>
+    <p><span class="code">Marshmallow&nbsp;schemas&nbsp;for&nbsp;serializing&nbsp;models.</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="flask_marshmallow.sqla.html#SQLAlchemyAutoSchema">flask_marshmallow.sqla.SQLAlchemyAutoSchema</a>(<a href="marshmallow_sqlalchemy.schema.html#SQLAlchemyAutoSchema">marshmallow_sqlalchemy.schema.SQLAlchemyAutoSchema</a>, <a href="flask_marshmallow.schema.html#Schema">flask_marshmallow.schema.Schema</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="app.schemas.html#ReservationSchema">ReservationSchema</a>
+</dt><dt class="heading-text"><a href="app.schemas.html#RestaurantSchema">RestaurantSchema</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ReservationSchema">class <strong>ReservationSchema</strong></a>(<a href="flask_marshmallow.sqla.html#SQLAlchemyAutoSchema">flask_marshmallow.sqla.SQLAlchemyAutoSchema</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ReservationSchema">ReservationSchema</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="app.schemas.html#ReservationSchema">ReservationSchema</a></dd>
+<dd><a href="flask_marshmallow.sqla.html#SQLAlchemyAutoSchema">flask_marshmallow.sqla.SQLAlchemyAutoSchema</a></dd>
+<dd><a href="marshmallow_sqlalchemy.schema.html#SQLAlchemyAutoSchema">marshmallow_sqlalchemy.schema.SQLAlchemyAutoSchema</a></dd>
+<dd><a href="marshmallow_sqlalchemy.schema.html#SQLAlchemySchema">marshmallow_sqlalchemy.schema.SQLAlchemySchema</a></dd>
+<dd>marshmallow_sqlalchemy.load_instance_mixin.Schema</dd>
+<dd><a href="typing.html#Generic">typing.Generic</a></dd>
+<dd><a href="flask_marshmallow.schema.html#Schema">flask_marshmallow.schema.Schema</a></dd>
+<dd><a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>Meta</strong> = &lt;class 'app.schemas.ReservationSchema.Meta'&gt;</dl>
+
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>opts</strong> = &lt;flask_marshmallow.sqla.SQLAlchemyAutoSchemaOpts object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="flask_marshmallow.sqla.html#SQLAlchemyAutoSchema">flask_marshmallow.sqla.SQLAlchemyAutoSchema</a>:<br>
+<dl><dt><strong>OPTIONS_CLASS</strong> = &lt;class 'flask_marshmallow.sqla.SQLAlchemyAutoSchemaOpts'&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="marshmallow_sqlalchemy.schema.html#SQLAlchemyAutoSchema">marshmallow_sqlalchemy.schema.SQLAlchemyAutoSchema</a>:<br>
+<dl><dt><strong>__orig_bases__</strong> = (marshmallow_sqlalchemy.schema.SQLAlchemySchema[~_ModelType],)</dl>
+
+<hr>
+Methods inherited from marshmallow_sqlalchemy.load_instance_mixin.Schema:<br>
+<dl><dt><a name="ReservationSchema-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-get_instance"><strong>get_instance</strong></a>(self, data) -&gt; '_ModelType | None'</dt><dd><span class="code">Retrieve&nbsp;an&nbsp;existing&nbsp;record&nbsp;by&nbsp;primary&nbsp;key(s).&nbsp;If&nbsp;the&nbsp;schema&nbsp;instance<br>
+is&nbsp;transient,&nbsp;return&nbsp;`None`.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;Serialized&nbsp;data&nbsp;to&nbsp;inform&nbsp;lookup.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-load"><strong>load</strong></a>(
+    self,
+    data: '_LoadDataT',
+    *,
+    session: 'Session | None' = None,
+    instance: '_ModelType | None' = None,
+    transient: 'bool' = False,
+    **kwargs
+) -&gt; 'Any'</dt><dd><span class="code">Deserialize&nbsp;data.&nbsp;If&nbsp;``load_instance``&nbsp;is&nbsp;set&nbsp;to&nbsp;`True`<br>
+in&nbsp;the&nbsp;schema&nbsp;meta&nbsp;options,&nbsp;load&nbsp;the&nbsp;data&nbsp;as&nbsp;model&nbsp;instance(s).<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;The&nbsp;data&nbsp;to&nbsp;deserialize.<br>
+:param&nbsp;session:&nbsp;SQLAlchemy&nbsp;`session&nbsp;&lt;sqlalchemy.orm.Session&gt;`.<br>
+:param&nbsp;instance:&nbsp;Existing&nbsp;model&nbsp;instance&nbsp;to&nbsp;modify.<br>
+:param&nbsp;transient:&nbsp;If&nbsp;`True`,&nbsp;load&nbsp;transient&nbsp;model&nbsp;instance(s).<br>
+:param&nbsp;kwargs:&nbsp;Same&nbsp;keyword&nbsp;arguments&nbsp;as&nbsp;`marshmallow.Schema.load`.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-make_instance"><strong>make_instance</strong></a>(self, data, **kwargs) -&gt; '_ModelType'</dt><dd><span class="code">Deserialize&nbsp;data&nbsp;to&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;model&nbsp;if&nbsp;self.<strong>load_instance</strong>&nbsp;is&nbsp;True.<br>
+&nbsp;<br>
+Update&nbsp;an&nbsp;existing&nbsp;row&nbsp;if&nbsp;specified&nbsp;in&nbsp;`self.<strong>instance</strong>`&nbsp;or&nbsp;loaded&nbsp;by&nbsp;primary<br>
+key(s)&nbsp;in&nbsp;the&nbsp;data;&nbsp;else&nbsp;create&nbsp;a&nbsp;new&nbsp;row.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;Data&nbsp;to&nbsp;deserialize.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-validate"><strong>validate</strong></a>(
+    self,
+    data: '_LoadDataT',
+    *,
+    session: 'Session | None' = None,
+    **kwargs
+) -&gt; 'dict[str, list[str]]'</dt><dd><span class="code">Same&nbsp;as&nbsp;`marshmallow.Schema.validate`&nbsp;but&nbsp;allows&nbsp;passing&nbsp;a&nbsp;``session``.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from marshmallow_sqlalchemy.load_instance_mixin.Schema:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<dl><dt><strong>session</strong></dt>
+<dd><span class="code">The&nbsp;SQLAlchemy&nbsp;session&nbsp;used&nbsp;to&nbsp;load&nbsp;models.</span></dd>
+</dl>
+<dl><dt><strong>transient</strong></dt>
+<dd><span class="code">Whether&nbsp;model&nbsp;instances&nbsp;are&nbsp;loaded&nbsp;in&nbsp;a&nbsp;transient&nbsp;state.</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from marshmallow_sqlalchemy.load_instance_mixin.Schema:<br>
+<dl><dt><strong>__annotations__</strong> = {'_load_instance': 'bool', '_session': 'Session | None', '_transient': 'bool | None', 'instance': '_ModelType | None', 'opts': 'LoadInstanceMixin.Opts'}</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">typing.Generic</a>:<br>
+<dl><dt><a name="ReservationSchema-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-__init_subclass__"><strong>__init_subclass__</strong></a>(...)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="flask_marshmallow.schema.html#Schema">flask_marshmallow.schema.Schema</a>:<br>
+<dl><dt><a name="ReservationSchema-jsonify"><strong>jsonify</strong></a>(self, obj: 'typing.Any', many: 'bool | None' = None, *args, **kwargs) -&gt; 'Response'</dt><dd><span class="code">Return&nbsp;a&nbsp;JSON&nbsp;response&nbsp;containing&nbsp;the&nbsp;serialized&nbsp;data.<br>
+&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;obj:&nbsp;Object&nbsp;to&nbsp;serialize.<br>
+:param&nbsp;bool&nbsp;many:&nbsp;Whether&nbsp;`obj`&nbsp;should&nbsp;be&nbsp;serialized&nbsp;as&nbsp;an&nbsp;instance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;None,&nbsp;defaults&nbsp;to&nbsp;the&nbsp;value&nbsp;of&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`many`&nbsp;attribute&nbsp;on&nbsp;this&nbsp;Schema.<br>
+:param&nbsp;kwargs:&nbsp;Additional&nbsp;keyword&nbsp;arguments&nbsp;passed&nbsp;to&nbsp;`flask.jsonify`.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;0.6.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Takes&nbsp;the&nbsp;same&nbsp;arguments&nbsp;as&nbsp;`marshmallow.Schema.dump`.&nbsp;Additional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;keyword&nbsp;arguments&nbsp;are&nbsp;passed&nbsp;to&nbsp;`flask.jsonify`.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;0.6.3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;`many`&nbsp;argument&nbsp;for&nbsp;this&nbsp;method&nbsp;defaults&nbsp;to&nbsp;the&nbsp;value&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;`many`&nbsp;attribute&nbsp;on&nbsp;the&nbsp;Schema.&nbsp;Previously,&nbsp;the&nbsp;`many`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argument&nbsp;of&nbsp;this&nbsp;method&nbsp;defaulted&nbsp;to&nbsp;False,&nbsp;regardless&nbsp;of&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;of&nbsp;`Schema.many`.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a>:<br>
+<dl><dt><a name="ReservationSchema-__repr__"><strong>__repr__</strong></a>(self) -&gt; 'str'</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-dump"><strong>dump</strong></a>(self, obj: 'typing.Any', *, many: 'bool | None' = None)</dt><dd><span class="code">Serialize&nbsp;an&nbsp;object&nbsp;to&nbsp;native&nbsp;Python&nbsp;data&nbsp;types&nbsp;according&nbsp;to&nbsp;this<br>
+Schema's&nbsp;fields.<br>
+&nbsp;<br>
+:param&nbsp;obj:&nbsp;The&nbsp;object&nbsp;to&nbsp;serialize.<br>
+:param&nbsp;many:&nbsp;Whether&nbsp;to&nbsp;serialize&nbsp;`obj`&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;`None`,&nbsp;the&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;`self.<strong>many</strong>`&nbsp;is&nbsp;used.<br>
+:return:&nbsp;Serialized&nbsp;data<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0b7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;returns&nbsp;the&nbsp;serialized&nbsp;data&nbsp;rather&nbsp;than&nbsp;a&nbsp;``(data,&nbsp;errors)``&nbsp;duple.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;:exc:`ValidationError&nbsp;&lt;marshmallow.exceptions.ValidationError&gt;`&nbsp;is&nbsp;raised<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;``obj``&nbsp;is&nbsp;invalid.<br>
+..&nbsp;versionchanged::&nbsp;3.0.0rc9<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Validation&nbsp;no&nbsp;longer&nbsp;occurs&nbsp;upon&nbsp;serialization.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-dumps"><strong>dumps</strong></a>(self, obj: 'typing.Any', *args, many: 'bool | None' = None, **kwargs)</dt><dd><span class="code">Same&nbsp;as&nbsp;:meth:`dump`,&nbsp;except&nbsp;return&nbsp;a&nbsp;JSON-encoded&nbsp;string.<br>
+&nbsp;<br>
+:param&nbsp;obj:&nbsp;The&nbsp;object&nbsp;to&nbsp;serialize.<br>
+:param&nbsp;many:&nbsp;Whether&nbsp;to&nbsp;serialize&nbsp;`obj`&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;`None`,&nbsp;the&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;`self.<strong>many</strong>`&nbsp;is&nbsp;used.<br>
+:return:&nbsp;A&nbsp;``json``&nbsp;string<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0b7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;returns&nbsp;the&nbsp;serialized&nbsp;data&nbsp;rather&nbsp;than&nbsp;a&nbsp;``(data,&nbsp;errors)``&nbsp;duple.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;:exc:`ValidationError&nbsp;&lt;marshmallow.exceptions.ValidationError&gt;`&nbsp;is&nbsp;raised<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;``obj``&nbsp;is&nbsp;invalid.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-get_attribute"><strong>get_attribute</strong></a>(self, obj: 'typing.Any', attr: 'str', default: 'typing.Any')</dt><dd><span class="code">Defines&nbsp;how&nbsp;to&nbsp;pull&nbsp;values&nbsp;from&nbsp;an&nbsp;object&nbsp;to&nbsp;serialize.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0a1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Changed&nbsp;position&nbsp;of&nbsp;``obj``&nbsp;and&nbsp;``attr``.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-handle_error"><strong>handle_error</strong></a>(
+    self,
+    error: 'ValidationError',
+    data: 'typing.Any',
+    *,
+    many: 'bool',
+    **kwargs
+)</dt><dd><span class="code">Custom&nbsp;error&nbsp;handler&nbsp;function&nbsp;for&nbsp;the&nbsp;schema.<br>
+&nbsp;<br>
+:param&nbsp;error:&nbsp;The&nbsp;`ValidationError`&nbsp;raised&nbsp;during&nbsp;(de)serialization.<br>
+:param&nbsp;data:&nbsp;The&nbsp;original&nbsp;input&nbsp;data.<br>
+:param&nbsp;many:&nbsp;Value&nbsp;of&nbsp;``many``&nbsp;on&nbsp;dump&nbsp;or&nbsp;load.<br>
+:param&nbsp;partial:&nbsp;Value&nbsp;of&nbsp;``partial``&nbsp;on&nbsp;load.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0rc9<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Receives&nbsp;`many`&nbsp;and&nbsp;`partial`&nbsp;(on&nbsp;deserialization)&nbsp;as&nbsp;keyword&nbsp;arguments.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-loads"><strong>loads</strong></a>(
+    self,
+    s: 'str | bytes | bytearray',
+    /,
+    *,
+    many: 'bool | None' = None,
+    partial: 'bool | types.StrSequenceOrSet | None' = None,
+    unknown: 'types.UnknownOption | None' = None,
+    **kwargs
+)</dt><dd><span class="code">Same&nbsp;as&nbsp;:meth:`load`,&nbsp;except&nbsp;it&nbsp;uses&nbsp;`marshmallow.Schema.Meta.render_module`&nbsp;to&nbsp;deserialize<br>
+the&nbsp;passed&nbsp;string&nbsp;before&nbsp;passing&nbsp;data&nbsp;to&nbsp;:meth:`load`.<br>
+&nbsp;<br>
+:param&nbsp;s:&nbsp;A&nbsp;string&nbsp;of&nbsp;the&nbsp;data&nbsp;to&nbsp;deserialize.<br>
+:param&nbsp;many:&nbsp;Whether&nbsp;to&nbsp;deserialize&nbsp;`obj`&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;`None`,&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;for&nbsp;`self.<strong>many</strong>`&nbsp;is&nbsp;used.<br>
+:param&nbsp;partial:&nbsp;Whether&nbsp;to&nbsp;ignore&nbsp;missing&nbsp;fields&nbsp;and&nbsp;not&nbsp;require<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any&nbsp;fields&nbsp;declared.&nbsp;Propagates&nbsp;down&nbsp;to&nbsp;``Nested``&nbsp;fields&nbsp;as&nbsp;well.&nbsp;If<br>
+&nbsp;&nbsp;&nbsp;&nbsp;its&nbsp;value&nbsp;is&nbsp;an&nbsp;iterable,&nbsp;only&nbsp;missing&nbsp;fields&nbsp;listed&nbsp;in&nbsp;that&nbsp;iterable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;be&nbsp;ignored.&nbsp;Use&nbsp;dot&nbsp;delimiters&nbsp;to&nbsp;specify&nbsp;nested&nbsp;fields.<br>
+:param&nbsp;unknown:&nbsp;Whether&nbsp;to&nbsp;exclude,&nbsp;include,&nbsp;or&nbsp;raise&nbsp;an&nbsp;error&nbsp;for&nbsp;unknown<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fields&nbsp;in&nbsp;the&nbsp;data.&nbsp;Use&nbsp;`EXCLUDE`,&nbsp;`INCLUDE`&nbsp;or&nbsp;`RAISE`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;`None`,&nbsp;the&nbsp;value&nbsp;for&nbsp;`self.<strong>unknown</strong>`&nbsp;is&nbsp;used.<br>
+:return:&nbsp;Deserialized&nbsp;data<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0b7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;returns&nbsp;the&nbsp;deserialized&nbsp;data&nbsp;rather&nbsp;than&nbsp;a&nbsp;``(data,&nbsp;errors)``&nbsp;duple.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;:exc:`ValidationError&nbsp;&lt;marshmallow.exceptions.ValidationError&gt;`&nbsp;is&nbsp;raised<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;invalid&nbsp;data&nbsp;are&nbsp;passed.<br>
+..&nbsp;versionchanged::&nbsp;4.0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Rename&nbsp;``json_module``&nbsp;parameter&nbsp;to&nbsp;``s``.</span></dd></dl>
+
+<dl><dt><a name="ReservationSchema-on_bind_field"><strong>on_bind_field</strong></a>(self, field_name: 'str', field_obj: 'Field') -&gt; 'None'</dt><dd><span class="code">Hook&nbsp;to&nbsp;modify&nbsp;a&nbsp;field&nbsp;when&nbsp;it&nbsp;is&nbsp;bound&nbsp;to&nbsp;the&nbsp;`Schema&nbsp;&lt;marshmallow.Schema&gt;`.<br>
+&nbsp;<br>
+No-op&nbsp;by&nbsp;default.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a>:<br>
+<dl><dt><a name="ReservationSchema-from_dict"><strong>from_dict</strong></a>(fields: 'dict[str, Field]', *, name: 'str' = 'GeneratedSchema') -&gt; 'type[Schema]'</dt><dd><span class="code">Generate&nbsp;a&nbsp;`Schema&nbsp;&lt;marshmallow.Schema&gt;`&nbsp;class&nbsp;given&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;fields.<br>
+&nbsp;<br>
+..&nbsp;code-block::&nbsp;python<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;marshmallow&nbsp;import&nbsp;Schema,&nbsp;fields<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;PersonSchema&nbsp;=&nbsp;Schema.<a href="#ReservationSchema-from_dict">from_dict</a>({"name":&nbsp;fields.Str()})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(PersonSchema().<a href="#ReservationSchema-load">load</a>({"name":&nbsp;"David"}))&nbsp;&nbsp;#&nbsp;=&gt;&nbsp;{'name':&nbsp;'David'}<br>
+&nbsp;<br>
+Generated&nbsp;schemas&nbsp;are&nbsp;not&nbsp;added&nbsp;to&nbsp;the&nbsp;class&nbsp;registry&nbsp;and&nbsp;therefore&nbsp;cannot<br>
+be&nbsp;referred&nbsp;to&nbsp;by&nbsp;name&nbsp;in&nbsp;`Nested`&nbsp;fields.<br>
+&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;fields:&nbsp;Dictionary&nbsp;mapping&nbsp;field&nbsp;names&nbsp;to&nbsp;field&nbsp;instances.<br>
+:param&nbsp;name:&nbsp;Optional&nbsp;name&nbsp;for&nbsp;the&nbsp;class,&nbsp;which&nbsp;will&nbsp;appear&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;``repr``&nbsp;for&nbsp;the&nbsp;class.<br>
+&nbsp;<br>
+..&nbsp;versionadded::&nbsp;3.0.0</span></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a>:<br>
+<dl><dt><strong>TYPE_MAPPING</strong> = {&lt;class 'str'&gt;: &lt;class 'marshmallow.fields.String'&gt;, &lt;class 'bytes'&gt;: &lt;class 'marshmallow.fields.String'&gt;, &lt;class 'datetime.datetime'&gt;: &lt;class 'marshmallow.fields.DateTime'&gt;, &lt;class 'float'&gt;: &lt;class 'marshmallow.fields.Float'&gt;, &lt;class 'bool'&gt;: &lt;class 'marshmallow.fields.Boolean'&gt;, &lt;class 'tuple'&gt;: &lt;class 'marshmallow.fields.Raw'&gt;, &lt;class 'list'&gt;: &lt;class 'marshmallow.fields.Raw'&gt;, &lt;class 'set'&gt;: &lt;class 'marshmallow.fields.Raw'&gt;, &lt;class 'int'&gt;: &lt;class 'marshmallow.fields.Integer'&gt;, &lt;class 'uuid.UUID'&gt;: &lt;class 'marshmallow.fields.UUID'&gt;, ...}</dl>
+
+<dl><dt><strong>dict_class</strong> = &lt;class 'dict'&gt;<dd><span class="code">dict()&nbsp;-&gt;&nbsp;new&nbsp;empty&nbsp;dictionary<br>
+dict(mapping)&nbsp;-&gt;&nbsp;new&nbsp;dictionary&nbsp;initialized&nbsp;from&nbsp;a&nbsp;mapping&nbsp;object's<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;value)&nbsp;pairs<br>
+dict(iterable)&nbsp;-&gt;&nbsp;new&nbsp;dictionary&nbsp;initialized&nbsp;as&nbsp;if&nbsp;via:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;{}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;k,&nbsp;v&nbsp;in&nbsp;iterable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[k]&nbsp;=&nbsp;v<br>
+dict(**kwargs)&nbsp;-&gt;&nbsp;new&nbsp;dictionary&nbsp;initialized&nbsp;with&nbsp;the&nbsp;name=value&nbsp;pairs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;the&nbsp;keyword&nbsp;argument&nbsp;list.&nbsp;&nbsp;For&nbsp;example:&nbsp;&nbsp;dict(one=1,&nbsp;two=2)</span></dl>
+
+<dl><dt><strong>error_messages</strong> = {}</dl>
+
+<dl><dt><strong>set_class</strong> = &lt;class 'marshmallow.orderedset.OrderedSet'&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="RestaurantSchema">class <strong>RestaurantSchema</strong></a>(<a href="flask_marshmallow.sqla.html#SQLAlchemyAutoSchema">flask_marshmallow.sqla.SQLAlchemyAutoSchema</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#RestaurantSchema">RestaurantSchema</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="app.schemas.html#RestaurantSchema">RestaurantSchema</a></dd>
+<dd><a href="flask_marshmallow.sqla.html#SQLAlchemyAutoSchema">flask_marshmallow.sqla.SQLAlchemyAutoSchema</a></dd>
+<dd><a href="marshmallow_sqlalchemy.schema.html#SQLAlchemyAutoSchema">marshmallow_sqlalchemy.schema.SQLAlchemyAutoSchema</a></dd>
+<dd><a href="marshmallow_sqlalchemy.schema.html#SQLAlchemySchema">marshmallow_sqlalchemy.schema.SQLAlchemySchema</a></dd>
+<dd>marshmallow_sqlalchemy.load_instance_mixin.Schema</dd>
+<dd><a href="typing.html#Generic">typing.Generic</a></dd>
+<dd><a href="flask_marshmallow.schema.html#Schema">flask_marshmallow.schema.Schema</a></dd>
+<dd><a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>Meta</strong> = &lt;class 'app.schemas.RestaurantSchema.Meta'&gt;</dl>
+
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>opts</strong> = &lt;flask_marshmallow.sqla.SQLAlchemyAutoSchemaOpts object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="flask_marshmallow.sqla.html#SQLAlchemyAutoSchema">flask_marshmallow.sqla.SQLAlchemyAutoSchema</a>:<br>
+<dl><dt><strong>OPTIONS_CLASS</strong> = &lt;class 'flask_marshmallow.sqla.SQLAlchemyAutoSchemaOpts'&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="marshmallow_sqlalchemy.schema.html#SQLAlchemyAutoSchema">marshmallow_sqlalchemy.schema.SQLAlchemyAutoSchema</a>:<br>
+<dl><dt><strong>__orig_bases__</strong> = (marshmallow_sqlalchemy.schema.SQLAlchemySchema[~_ModelType],)</dl>
+
+<hr>
+Methods inherited from marshmallow_sqlalchemy.load_instance_mixin.Schema:<br>
+<dl><dt><a name="RestaurantSchema-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-get_instance"><strong>get_instance</strong></a>(self, data) -&gt; '_ModelType | None'</dt><dd><span class="code">Retrieve&nbsp;an&nbsp;existing&nbsp;record&nbsp;by&nbsp;primary&nbsp;key(s).&nbsp;If&nbsp;the&nbsp;schema&nbsp;instance<br>
+is&nbsp;transient,&nbsp;return&nbsp;`None`.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;Serialized&nbsp;data&nbsp;to&nbsp;inform&nbsp;lookup.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-load"><strong>load</strong></a>(
+    self,
+    data: '_LoadDataT',
+    *,
+    session: 'Session | None' = None,
+    instance: '_ModelType | None' = None,
+    transient: 'bool' = False,
+    **kwargs
+) -&gt; 'Any'</dt><dd><span class="code">Deserialize&nbsp;data.&nbsp;If&nbsp;``load_instance``&nbsp;is&nbsp;set&nbsp;to&nbsp;`True`<br>
+in&nbsp;the&nbsp;schema&nbsp;meta&nbsp;options,&nbsp;load&nbsp;the&nbsp;data&nbsp;as&nbsp;model&nbsp;instance(s).<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;The&nbsp;data&nbsp;to&nbsp;deserialize.<br>
+:param&nbsp;session:&nbsp;SQLAlchemy&nbsp;`session&nbsp;&lt;sqlalchemy.orm.Session&gt;`.<br>
+:param&nbsp;instance:&nbsp;Existing&nbsp;model&nbsp;instance&nbsp;to&nbsp;modify.<br>
+:param&nbsp;transient:&nbsp;If&nbsp;`True`,&nbsp;load&nbsp;transient&nbsp;model&nbsp;instance(s).<br>
+:param&nbsp;kwargs:&nbsp;Same&nbsp;keyword&nbsp;arguments&nbsp;as&nbsp;`marshmallow.Schema.load`.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-make_instance"><strong>make_instance</strong></a>(self, data, **kwargs) -&gt; '_ModelType'</dt><dd><span class="code">Deserialize&nbsp;data&nbsp;to&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;model&nbsp;if&nbsp;self.<strong>load_instance</strong>&nbsp;is&nbsp;True.<br>
+&nbsp;<br>
+Update&nbsp;an&nbsp;existing&nbsp;row&nbsp;if&nbsp;specified&nbsp;in&nbsp;`self.<strong>instance</strong>`&nbsp;or&nbsp;loaded&nbsp;by&nbsp;primary<br>
+key(s)&nbsp;in&nbsp;the&nbsp;data;&nbsp;else&nbsp;create&nbsp;a&nbsp;new&nbsp;row.<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;Data&nbsp;to&nbsp;deserialize.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-validate"><strong>validate</strong></a>(
+    self,
+    data: '_LoadDataT',
+    *,
+    session: 'Session | None' = None,
+    **kwargs
+) -&gt; 'dict[str, list[str]]'</dt><dd><span class="code">Same&nbsp;as&nbsp;`marshmallow.Schema.validate`&nbsp;but&nbsp;allows&nbsp;passing&nbsp;a&nbsp;``session``.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from marshmallow_sqlalchemy.load_instance_mixin.Schema:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<dl><dt><strong>session</strong></dt>
+<dd><span class="code">The&nbsp;SQLAlchemy&nbsp;session&nbsp;used&nbsp;to&nbsp;load&nbsp;models.</span></dd>
+</dl>
+<dl><dt><strong>transient</strong></dt>
+<dd><span class="code">Whether&nbsp;model&nbsp;instances&nbsp;are&nbsp;loaded&nbsp;in&nbsp;a&nbsp;transient&nbsp;state.</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from marshmallow_sqlalchemy.load_instance_mixin.Schema:<br>
+<dl><dt><strong>__annotations__</strong> = {'_load_instance': 'bool', '_session': 'Session | None', '_transient': 'bool | None', 'instance': '_ModelType | None', 'opts': 'LoadInstanceMixin.Opts'}</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">typing.Generic</a>:<br>
+<dl><dt><a name="RestaurantSchema-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-__init_subclass__"><strong>__init_subclass__</strong></a>(...)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="flask_marshmallow.schema.html#Schema">flask_marshmallow.schema.Schema</a>:<br>
+<dl><dt><a name="RestaurantSchema-jsonify"><strong>jsonify</strong></a>(self, obj: 'typing.Any', many: 'bool | None' = None, *args, **kwargs) -&gt; 'Response'</dt><dd><span class="code">Return&nbsp;a&nbsp;JSON&nbsp;response&nbsp;containing&nbsp;the&nbsp;serialized&nbsp;data.<br>
+&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;obj:&nbsp;Object&nbsp;to&nbsp;serialize.<br>
+:param&nbsp;bool&nbsp;many:&nbsp;Whether&nbsp;`obj`&nbsp;should&nbsp;be&nbsp;serialized&nbsp;as&nbsp;an&nbsp;instance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;None,&nbsp;defaults&nbsp;to&nbsp;the&nbsp;value&nbsp;of&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`many`&nbsp;attribute&nbsp;on&nbsp;this&nbsp;Schema.<br>
+:param&nbsp;kwargs:&nbsp;Additional&nbsp;keyword&nbsp;arguments&nbsp;passed&nbsp;to&nbsp;`flask.jsonify`.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;0.6.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Takes&nbsp;the&nbsp;same&nbsp;arguments&nbsp;as&nbsp;`marshmallow.Schema.dump`.&nbsp;Additional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;keyword&nbsp;arguments&nbsp;are&nbsp;passed&nbsp;to&nbsp;`flask.jsonify`.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;0.6.3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;`many`&nbsp;argument&nbsp;for&nbsp;this&nbsp;method&nbsp;defaults&nbsp;to&nbsp;the&nbsp;value&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;`many`&nbsp;attribute&nbsp;on&nbsp;the&nbsp;Schema.&nbsp;Previously,&nbsp;the&nbsp;`many`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argument&nbsp;of&nbsp;this&nbsp;method&nbsp;defaulted&nbsp;to&nbsp;False,&nbsp;regardless&nbsp;of&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;of&nbsp;`Schema.many`.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a>:<br>
+<dl><dt><a name="RestaurantSchema-__repr__"><strong>__repr__</strong></a>(self) -&gt; 'str'</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-dump"><strong>dump</strong></a>(self, obj: 'typing.Any', *, many: 'bool | None' = None)</dt><dd><span class="code">Serialize&nbsp;an&nbsp;object&nbsp;to&nbsp;native&nbsp;Python&nbsp;data&nbsp;types&nbsp;according&nbsp;to&nbsp;this<br>
+Schema's&nbsp;fields.<br>
+&nbsp;<br>
+:param&nbsp;obj:&nbsp;The&nbsp;object&nbsp;to&nbsp;serialize.<br>
+:param&nbsp;many:&nbsp;Whether&nbsp;to&nbsp;serialize&nbsp;`obj`&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;`None`,&nbsp;the&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;`self.<strong>many</strong>`&nbsp;is&nbsp;used.<br>
+:return:&nbsp;Serialized&nbsp;data<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0b7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;returns&nbsp;the&nbsp;serialized&nbsp;data&nbsp;rather&nbsp;than&nbsp;a&nbsp;``(data,&nbsp;errors)``&nbsp;duple.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;:exc:`ValidationError&nbsp;&lt;marshmallow.exceptions.ValidationError&gt;`&nbsp;is&nbsp;raised<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;``obj``&nbsp;is&nbsp;invalid.<br>
+..&nbsp;versionchanged::&nbsp;3.0.0rc9<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Validation&nbsp;no&nbsp;longer&nbsp;occurs&nbsp;upon&nbsp;serialization.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-dumps"><strong>dumps</strong></a>(self, obj: 'typing.Any', *args, many: 'bool | None' = None, **kwargs)</dt><dd><span class="code">Same&nbsp;as&nbsp;:meth:`dump`,&nbsp;except&nbsp;return&nbsp;a&nbsp;JSON-encoded&nbsp;string.<br>
+&nbsp;<br>
+:param&nbsp;obj:&nbsp;The&nbsp;object&nbsp;to&nbsp;serialize.<br>
+:param&nbsp;many:&nbsp;Whether&nbsp;to&nbsp;serialize&nbsp;`obj`&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;`None`,&nbsp;the&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;`self.<strong>many</strong>`&nbsp;is&nbsp;used.<br>
+:return:&nbsp;A&nbsp;``json``&nbsp;string<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0b7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;returns&nbsp;the&nbsp;serialized&nbsp;data&nbsp;rather&nbsp;than&nbsp;a&nbsp;``(data,&nbsp;errors)``&nbsp;duple.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;:exc:`ValidationError&nbsp;&lt;marshmallow.exceptions.ValidationError&gt;`&nbsp;is&nbsp;raised<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;``obj``&nbsp;is&nbsp;invalid.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-get_attribute"><strong>get_attribute</strong></a>(self, obj: 'typing.Any', attr: 'str', default: 'typing.Any')</dt><dd><span class="code">Defines&nbsp;how&nbsp;to&nbsp;pull&nbsp;values&nbsp;from&nbsp;an&nbsp;object&nbsp;to&nbsp;serialize.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0a1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Changed&nbsp;position&nbsp;of&nbsp;``obj``&nbsp;and&nbsp;``attr``.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-handle_error"><strong>handle_error</strong></a>(
+    self,
+    error: 'ValidationError',
+    data: 'typing.Any',
+    *,
+    many: 'bool',
+    **kwargs
+)</dt><dd><span class="code">Custom&nbsp;error&nbsp;handler&nbsp;function&nbsp;for&nbsp;the&nbsp;schema.<br>
+&nbsp;<br>
+:param&nbsp;error:&nbsp;The&nbsp;`ValidationError`&nbsp;raised&nbsp;during&nbsp;(de)serialization.<br>
+:param&nbsp;data:&nbsp;The&nbsp;original&nbsp;input&nbsp;data.<br>
+:param&nbsp;many:&nbsp;Value&nbsp;of&nbsp;``many``&nbsp;on&nbsp;dump&nbsp;or&nbsp;load.<br>
+:param&nbsp;partial:&nbsp;Value&nbsp;of&nbsp;``partial``&nbsp;on&nbsp;load.<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0rc9<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Receives&nbsp;`many`&nbsp;and&nbsp;`partial`&nbsp;(on&nbsp;deserialization)&nbsp;as&nbsp;keyword&nbsp;arguments.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-loads"><strong>loads</strong></a>(
+    self,
+    s: 'str | bytes | bytearray',
+    /,
+    *,
+    many: 'bool | None' = None,
+    partial: 'bool | types.StrSequenceOrSet | None' = None,
+    unknown: 'types.UnknownOption | None' = None,
+    **kwargs
+)</dt><dd><span class="code">Same&nbsp;as&nbsp;:meth:`load`,&nbsp;except&nbsp;it&nbsp;uses&nbsp;`marshmallow.Schema.Meta.render_module`&nbsp;to&nbsp;deserialize<br>
+the&nbsp;passed&nbsp;string&nbsp;before&nbsp;passing&nbsp;data&nbsp;to&nbsp;:meth:`load`.<br>
+&nbsp;<br>
+:param&nbsp;s:&nbsp;A&nbsp;string&nbsp;of&nbsp;the&nbsp;data&nbsp;to&nbsp;deserialize.<br>
+:param&nbsp;many:&nbsp;Whether&nbsp;to&nbsp;deserialize&nbsp;`obj`&nbsp;as&nbsp;a&nbsp;collection.&nbsp;If&nbsp;`None`,&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;for&nbsp;`self.<strong>many</strong>`&nbsp;is&nbsp;used.<br>
+:param&nbsp;partial:&nbsp;Whether&nbsp;to&nbsp;ignore&nbsp;missing&nbsp;fields&nbsp;and&nbsp;not&nbsp;require<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any&nbsp;fields&nbsp;declared.&nbsp;Propagates&nbsp;down&nbsp;to&nbsp;``Nested``&nbsp;fields&nbsp;as&nbsp;well.&nbsp;If<br>
+&nbsp;&nbsp;&nbsp;&nbsp;its&nbsp;value&nbsp;is&nbsp;an&nbsp;iterable,&nbsp;only&nbsp;missing&nbsp;fields&nbsp;listed&nbsp;in&nbsp;that&nbsp;iterable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;be&nbsp;ignored.&nbsp;Use&nbsp;dot&nbsp;delimiters&nbsp;to&nbsp;specify&nbsp;nested&nbsp;fields.<br>
+:param&nbsp;unknown:&nbsp;Whether&nbsp;to&nbsp;exclude,&nbsp;include,&nbsp;or&nbsp;raise&nbsp;an&nbsp;error&nbsp;for&nbsp;unknown<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fields&nbsp;in&nbsp;the&nbsp;data.&nbsp;Use&nbsp;`EXCLUDE`,&nbsp;`INCLUDE`&nbsp;or&nbsp;`RAISE`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;`None`,&nbsp;the&nbsp;value&nbsp;for&nbsp;`self.<strong>unknown</strong>`&nbsp;is&nbsp;used.<br>
+:return:&nbsp;Deserialized&nbsp;data<br>
+&nbsp;<br>
+..&nbsp;versionchanged::&nbsp;3.0.0b7<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;returns&nbsp;the&nbsp;deserialized&nbsp;data&nbsp;rather&nbsp;than&nbsp;a&nbsp;``(data,&nbsp;errors)``&nbsp;duple.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;:exc:`ValidationError&nbsp;&lt;marshmallow.exceptions.ValidationError&gt;`&nbsp;is&nbsp;raised<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;invalid&nbsp;data&nbsp;are&nbsp;passed.<br>
+..&nbsp;versionchanged::&nbsp;4.0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Rename&nbsp;``json_module``&nbsp;parameter&nbsp;to&nbsp;``s``.</span></dd></dl>
+
+<dl><dt><a name="RestaurantSchema-on_bind_field"><strong>on_bind_field</strong></a>(self, field_name: 'str', field_obj: 'Field') -&gt; 'None'</dt><dd><span class="code">Hook&nbsp;to&nbsp;modify&nbsp;a&nbsp;field&nbsp;when&nbsp;it&nbsp;is&nbsp;bound&nbsp;to&nbsp;the&nbsp;`Schema&nbsp;&lt;marshmallow.Schema&gt;`.<br>
+&nbsp;<br>
+No-op&nbsp;by&nbsp;default.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a>:<br>
+<dl><dt><a name="RestaurantSchema-from_dict"><strong>from_dict</strong></a>(fields: 'dict[str, Field]', *, name: 'str' = 'GeneratedSchema') -&gt; 'type[Schema]'</dt><dd><span class="code">Generate&nbsp;a&nbsp;`Schema&nbsp;&lt;marshmallow.Schema&gt;`&nbsp;class&nbsp;given&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;fields.<br>
+&nbsp;<br>
+..&nbsp;code-block::&nbsp;python<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;marshmallow&nbsp;import&nbsp;Schema,&nbsp;fields<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;PersonSchema&nbsp;=&nbsp;Schema.<a href="#RestaurantSchema-from_dict">from_dict</a>({"name":&nbsp;fields.Str()})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(PersonSchema().<a href="#RestaurantSchema-load">load</a>({"name":&nbsp;"David"}))&nbsp;&nbsp;#&nbsp;=&gt;&nbsp;{'name':&nbsp;'David'}<br>
+&nbsp;<br>
+Generated&nbsp;schemas&nbsp;are&nbsp;not&nbsp;added&nbsp;to&nbsp;the&nbsp;class&nbsp;registry&nbsp;and&nbsp;therefore&nbsp;cannot<br>
+be&nbsp;referred&nbsp;to&nbsp;by&nbsp;name&nbsp;in&nbsp;`Nested`&nbsp;fields.<br>
+&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;fields:&nbsp;Dictionary&nbsp;mapping&nbsp;field&nbsp;names&nbsp;to&nbsp;field&nbsp;instances.<br>
+:param&nbsp;name:&nbsp;Optional&nbsp;name&nbsp;for&nbsp;the&nbsp;class,&nbsp;which&nbsp;will&nbsp;appear&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;``repr``&nbsp;for&nbsp;the&nbsp;class.<br>
+&nbsp;<br>
+..&nbsp;versionadded::&nbsp;3.0.0</span></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="marshmallow.schema.html#Schema">marshmallow.schema.Schema</a>:<br>
+<dl><dt><strong>TYPE_MAPPING</strong> = {&lt;class 'str'&gt;: &lt;class 'marshmallow.fields.String'&gt;, &lt;class 'bytes'&gt;: &lt;class 'marshmallow.fields.String'&gt;, &lt;class 'datetime.datetime'&gt;: &lt;class 'marshmallow.fields.DateTime'&gt;, &lt;class 'float'&gt;: &lt;class 'marshmallow.fields.Float'&gt;, &lt;class 'bool'&gt;: &lt;class 'marshmallow.fields.Boolean'&gt;, &lt;class 'tuple'&gt;: &lt;class 'marshmallow.fields.Raw'&gt;, &lt;class 'list'&gt;: &lt;class 'marshmallow.fields.Raw'&gt;, &lt;class 'set'&gt;: &lt;class 'marshmallow.fields.Raw'&gt;, &lt;class 'int'&gt;: &lt;class 'marshmallow.fields.Integer'&gt;, &lt;class 'uuid.UUID'&gt;: &lt;class 'marshmallow.fields.UUID'&gt;, ...}</dl>
+
+<dl><dt><strong>dict_class</strong> = &lt;class 'dict'&gt;<dd><span class="code">dict()&nbsp;-&gt;&nbsp;new&nbsp;empty&nbsp;dictionary<br>
+dict(mapping)&nbsp;-&gt;&nbsp;new&nbsp;dictionary&nbsp;initialized&nbsp;from&nbsp;a&nbsp;mapping&nbsp;object's<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(key,&nbsp;value)&nbsp;pairs<br>
+dict(iterable)&nbsp;-&gt;&nbsp;new&nbsp;dictionary&nbsp;initialized&nbsp;as&nbsp;if&nbsp;via:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;{}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;k,&nbsp;v&nbsp;in&nbsp;iterable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d[k]&nbsp;=&nbsp;v<br>
+dict(**kwargs)&nbsp;-&gt;&nbsp;new&nbsp;dictionary&nbsp;initialized&nbsp;with&nbsp;the&nbsp;name=value&nbsp;pairs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;the&nbsp;keyword&nbsp;argument&nbsp;list.&nbsp;&nbsp;For&nbsp;example:&nbsp;&nbsp;dict(one=1,&nbsp;two=2)</span></dl>
+
+<dl><dt><strong>error_messages</strong> = {}</dl>
+
+<dl><dt><strong>set_class</strong> = &lt;class 'marshmallow.orderedset.OrderedSet'&gt;</dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>ma</strong> = &lt;flask_marshmallow.Marshmallow object&gt;</td></tr></table>
+</body></html>

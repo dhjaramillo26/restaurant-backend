@@ -1,3 +1,5 @@
+"""Database models used by the API."""
+
 from .extensions import db
 
 class Restaurant(db.Model):

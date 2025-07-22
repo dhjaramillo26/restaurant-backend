@@ -211,6 +211,18 @@ pytest
 
 ---
 
+## Generación de documentación
+
+El repositorio incluye un script para crear documentación HTML a partir de los
+docstrings del código. Ejecuta:
+
+```bash
+python generate_docs.py
+```
+
+Los archivos resultantes se guardarán en la carpeta `docs/`.
+
+
 ## Notas adicionales
 
 - Si realizas cambios en los modelos de datos, **recuerda correr las migraciones**.

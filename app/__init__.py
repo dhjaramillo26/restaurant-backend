@@ -1,3 +1,5 @@
+"""Application factory for the reservations API."""
+
 from flask import Flask
 from .extensions import db, ma, migrate
 from .routes.restaurants import restaurants_bp

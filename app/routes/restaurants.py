@@ -1,3 +1,5 @@
+"""Endpoints related to restaurant management."""
+
 from flask import Blueprint, request, jsonify, abort
 from app.models import Restaurant
 from app.schemas import RestaurantSchema

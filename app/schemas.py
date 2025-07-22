@@ -1,3 +1,5 @@
+"""Marshmallow schemas for serializing models."""
+
 from .extensions import ma
 from .models import Restaurant, Reservation
 
