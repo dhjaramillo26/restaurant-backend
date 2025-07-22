@@ -4,9 +4,12 @@ from .routes.restaurants import restaurants_bp
 from .routes.reservations import reservations_bp
 from config import DevConfig
 from .error_handlers import register_error_handlers
+from flask_cors import CORS
+
 
 def create_app():
     app = Flask(__name__)
+    CORS(app)
     app.config.from_object(DevConfig)
 
     db.init_app(app)
