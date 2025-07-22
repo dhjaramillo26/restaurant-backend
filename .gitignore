@@ -1,6 +1,5 @@
 # Entorno virtual
 venv/
-.env
 *.pyc
 __pycache__/
 instance/
